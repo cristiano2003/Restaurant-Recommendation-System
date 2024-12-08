@@ -3,6 +3,7 @@ import torch
 import torch.nn as nn 
 from sklearn.metrics import roc_auc_score, f1_score
 from model import CKAN
+from CKGAT_model import CKGAT
 import logging
 
 logging.basicConfig(format="[%(asctime)s] %(levelname)s: %(message)s", level=logging.INFO)
@@ -102,7 +103,8 @@ def topk_eval(args, model, train_data, test_data, user_triple_set, item_triple_s
 def _init_model(args, data_info):
     n_entity = data_info[3]
     n_relation = data_info[4]
-    model = CKAN(args, n_entity, n_relation)
+    # model = CKAN(args, n_entity, n_relation)
+    model = CKGAT(args, n_entity, n_relation)
     if args.use_cuda:
         model.cuda()
     optimizer = torch.optim.Adam(
