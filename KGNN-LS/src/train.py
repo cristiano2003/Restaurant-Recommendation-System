@@ -1,6 +1,6 @@
 # import tensorflow.compat.v1 as tf
 # tf.disable_v2_behavior()
-import ténsorflow as tf
+import tensorflow as tf
 import numpy as np
 from model import KGNN_LS
 
@@ -63,8 +63,8 @@ def get_interaction_table(train_data, n_entity):
     keys = keys.astype(np.int64)
     values = train_data[:, 2].astype(np.float32)
 
-    interaction_table = tf.contrib.lookup.HashTable(
-        tf.contrib.lookup.KeyValueTensorInitializer(keys=keys, values=values), default_value=0.5)
+    interaction_table = tf.lookup.HashTable(
+        tf.lookup.KeyValueTensorInitializer(keys=keys, values=values), default_value=0.5)
     return interaction_table, offset
 
 
