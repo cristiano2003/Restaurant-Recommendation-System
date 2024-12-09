@@ -1,6 +1,6 @@
 # import tensorflow.compat.v1 as tf
 # tf.disable_v2_behavior()
-import tensorflow._api.v2.compat.v1 as tf
+import tensorflow as tf
 import numpy as np
 from model import KGNN_LS
 
