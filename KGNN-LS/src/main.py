@@ -8,7 +8,7 @@ np.random.seed(555)
 
 parser = argparse.ArgumentParser()
 
-
+'''
 # movie
 parser.add_argument('--dataset', type=str, default='movie', help='which dataset to use')
 parser.add_argument('--n_epochs', type=int, default=10, help='the number of epochs')
@@ -19,7 +19,7 @@ parser.add_argument('--batch_size', type=int, default=65536, help='batch size')
 parser.add_argument('--l2_weight', type=float, default=1e-7, help='weight of l2 regularization')
 parser.add_argument('--ls_weight', type=float, default=1.0, help='weight of LS regularization')
 parser.add_argument('--lr', type=float, default=2e-2, help='learning rate')
-
+'''
 
 '''
 # book
@@ -47,7 +47,7 @@ parser.add_argument('--ls_weight', type=float, default=0.1, help='weight of LS r
 parser.add_argument('--lr', type=float, default=5e-4, help='learning rate')
 '''
 
-'''
+
 # restaurant
 parser.add_argument('--dataset', type=str, default='restaurant', help='which dataset to use')
 parser.add_argument('--n_epochs', type=int, default=10, help='the number of epochs')
@@ -58,7 +58,7 @@ parser.add_argument('--batch_size', type=int, default=65536, help='batch size')
 parser.add_argument('--l2_weight', type=float, default=1e-7, help='weight of l2 regularization')
 parser.add_argument('--ls_weight', type=float, default=0.5, help='weight of LS regularization')
 parser.add_argument('--lr', type=float, default=2e-2, help='learning rate')
-'''
+
 
 show_loss = False
 show_time = False
