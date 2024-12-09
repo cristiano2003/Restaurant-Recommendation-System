@@ -11,7 +11,6 @@ parser.add_argument('--batch_size', type=int, default=2048, help='batch size')
 parser.add_argument('--n_layer', type=int, default=3, help='depth of layer')
 parser.add_argument('--lr', type=float, default=0.002, help='learning rate')
 parser.add_argument('--l2_weight', type=float, default=1e-5, help='weight of the l2 regularization term')
-parser.add_argument('--ng', type=float, default=1e-2, help='negative_slope of the LeakyReLU')
 
 parser.add_argument('--dim', type=int, default=64, help='dimension of entity and relation embeddings')
 parser.add_argument('--user_triple_set_size', type=int, default=8, help='the number of triples in triple set of user')
