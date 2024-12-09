@@ -37,11 +37,11 @@ class KGNN_LS(object):
         self.labels = tf.keras.Input(dtype=tf.float32, shape=[None], name='labels')
 
     def _build_model(self, n_user, n_entity, n_relation):
-        self.user_emb_matrix = tf.get_variable(
+        self.user_emb_matrix = tf.Variable(
             shape=[n_user, self.dim], initializer=KGNN_LS.get_initializer(), name='user_emb_matrix')
-        self.entity_emb_matrix = tf.get_variable(
+        self.entity_emb_matrix = tf.Variable(
             shape=[n_entity, self.dim], initializer=KGNN_LS.get_initializer(), name='entity_emb_matrix')
-        self.relation_emb_matrix = tf.get_variable(
+        self.relation_emb_matrix = tf.Variable(
             shape=[n_relation, self.dim], initializer=KGNN_LS.get_initializer(), name='relation_emb_matrix')
 
         # [batch_size, dim]
