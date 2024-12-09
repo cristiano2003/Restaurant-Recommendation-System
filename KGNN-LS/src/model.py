@@ -12,7 +12,7 @@ class KGNN_LS(object):
 
     @staticmethod
     def get_initializer():
-        return tf.keras.initializers()
+        return tf.keras.initializers.GlorotUniform()
 
     def _parse_args(self, args, adj_entity, adj_relation, interaction_table, offset):
         # [entity_num, neighbor_sample_size]
