@@ -32,8 +32,8 @@ class KGNN_LS(object):
         self.lr = args.lr
 
     def _build_inputs(self):
-        self.user_indices = tf.Variable(dtype=tf.int64, shape=[None], name='user_indices')
-        self.item_indices = tf.Variable(dtype=tf.int64, shape=[None], name='item_indices')
+        self.user_indices = tf.constant(dtype=tf.int64, shape=[None], name='user_indices')
+        self.item_indices = tf.constant(dtype=tf.int64, shape=[None], name='item_indices')
         self.labels = tf.Variable(dtype=tf.float32, shape=[None], name='labels')
 
     def _build_model(self, n_user, n_entity, n_relation):
