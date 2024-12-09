@@ -63,7 +63,7 @@ def get_interaction_table(train_data, n_entity):
     keys = keys.astype(np.int64)
     values = train_data[:, 2].astype(np.float32)
 
-    interaction_table = tf.lookup.HashTable(
+    interaction_table = tf.lookup.StaticHashTable(
         tf.lookup.KeyValueTensorInitializer(keys=keys, values=values), default_value=0.5)
     return interaction_table, offset
 
